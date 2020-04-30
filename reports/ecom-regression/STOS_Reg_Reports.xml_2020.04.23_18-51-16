@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reports>
+   <test id="3333">
+      <testscenario>NormalOrderCreationTestSIT</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:12</name>
+         <name>04/17/2020 19:13:16</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestSIT2</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:16</name>
+         <name>04/17/2020 19:13:17</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT2&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestSIT4</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit4.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:18</name>
+         <name>04/17/2020 19:13:19</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit4.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT4&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestUAT</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomuat.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:19</name>
+         <name>04/17/2020 19:13:20</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestUAT2</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomuat2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:20</name>
+         <name>04/17/2020 19:13:21</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT2&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestUAT4</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomuat4.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:22</name>
+         <name>04/17/2020 19:13:23</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat4.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT4&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestExt</testscenario>
+      <browser>ie</browser>
+      <url>https://lab-www3.usfoods.com/order/</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:23</name>
+         <name>04/17/2020 19:13:24</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://lab-www3.usfoods.com/order/</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestExt&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestPERF1</testscenario>
+      <browser>ie</browser>
+      <url>https://ha-www3-perf-orange.usfoods.com/order/</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:24</name>
+         <name>04/17/2020 19:13:25</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ha-www3-perf-orange.usfoods.com/order/</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestPRef1&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestPERF2</testscenario>
+      <browser>ie</browser>
+      <url>https://green-www3-perf.usfoods.com/order/</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 19:13:25</name>
+         <name>04/17/2020 19:13:26</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://green-www3-perf.usfoods.com/order/</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestRef2&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestSIT</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:13:20</name>
+         <name>04/22/2020 19:14:32</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestSIT2</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:14:32</name>
+         <name>04/22/2020 19:15:43</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestSIT4</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit4.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>3</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:15:43</name>
+         <name>04/22/2020 19:16:47</name>
+         <name>04/22/2020 19:16:50</name>
+         <name>04/22/2020 19:17:14</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit4.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT4 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestUAT</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomuat.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:17:14</name>
+         <name>04/22/2020 19:17:24</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestUAT2</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomuat2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:17:24</name>
+         <name>04/22/2020 19:17:34</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestUAT4</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomuat4.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:17:34</name>
+         <name>04/22/2020 19:18:44</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat4.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT4 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestExt</testscenario>
+      <browser>firefox</browser>
+      <url>https://lab-www3.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:18:44</name>
+         <name>04/22/2020 19:20:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://lab-www3.usfoods.com/order/</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestExt Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestPERF1</testscenario>
+      <browser>firefox</browser>
+      <url>https://ha-www3-perf-orange.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>5</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>5</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:20:02</name>
+         <name>04/22/2020 19:20:53</name>
+         <name>04/22/2020 19:20:56</name>
+         <name>04/22/2020 19:23:01</name>
+         <name>04/22/2020 19:23:06</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ha-www3-perf-orange.usfoods.com/order/</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestPRef1 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3468">
+      <testscenario>NormalOrderCreationTestPERF2</testscenario>
+      <browser>firefox</browser>
+      <url>https://green-www3-perf.usfoods.com/order/</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 19:23:06</name>
+         <name>04/22/2020 19:23:32</name>
+         <name>04/22/2020 19:24:19</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://green-www3-perf.usfoods.com/order/</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestRef2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+</reports>

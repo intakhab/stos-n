@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reports>
+   <test id="3333">
+      <testscenario>NormalOrderCreationTestSIT</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:01:07</name>
+         <name>03/29/2020 19:01:12</name>
+         <name>03/29/2020 19:01:49</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestSIT2</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>3</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:01:49</name>
+         <name>03/29/2020 19:06:19</name>
+         <name>03/29/2020 19:06:20</name>
+         <name>03/29/2020 19:06:55</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestSIT4</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit4.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>5</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>5</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:06:55</name>
+         <name>03/29/2020 19:08:13</name>
+         <name>03/29/2020 19:08:14</name>
+         <name>03/29/2020 19:10:35</name>
+         <name>03/29/2020 19:10:42</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit4.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestSIT4 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestUAT</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomuat.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:10:42</name>
+         <name>03/29/2020 19:10:46</name>
+         <name>03/29/2020 19:11:23</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestUAT2</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomuat2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:11:23</name>
+         <name>03/29/2020 19:11:26</name>
+         <name>03/29/2020 19:12:03</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestUAT4</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomuat4.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>5</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>5</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:12:03</name>
+         <name>03/29/2020 19:14:29</name>
+         <name>03/29/2020 19:14:30</name>
+         <name>03/29/2020 19:16:54</name>
+         <name>03/29/2020 19:17:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat4.usfood.com/order</name>
+         <name>STOS is able to select customer: 10778298 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestUAT4 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestExt</testscenario>
+      <browser>chrome</browser>
+      <url>https://lab-www3.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>3</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:17:02</name>
+         <name>03/29/2020 19:19:02</name>
+         <name>03/29/2020 19:19:03</name>
+         <name>03/29/2020 19:19:34</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://lab-www3.usfoods.com/order/</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestExt Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestPERF1</testscenario>
+      <browser>chrome</browser>
+      <url>https://ha-www3-perf-orange.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:19:34</name>
+         <name>03/29/2020 19:20:42</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ha-www3-perf-orange.usfoods.com/order/</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestPRef1 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3333">
+      <testscenario>NormalOrderCreationTestPERF2</testscenario>
+      <browser>chrome</browser>
+      <url>https://green-www3-perf.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>5</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>5</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 19:20:42</name>
+         <name>03/29/2020 19:22:20</name>
+         <name>03/29/2020 19:22:22</name>
+         <name>03/29/2020 19:24:42</name>
+         <name>03/29/2020 19:24:46</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://green-www3-perf.usfoods.com/order/</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestRef2 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+</reports>

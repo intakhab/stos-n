@@ -1,0 +1,3243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reports>
+   <test id="3364">
+      <testscenario>AddingListWithoutUnassignedGroupTest</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>7</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>7</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 20:30:16</name>
+         <name>03/29/2020 20:31:41</name>
+         <name>03/29/2020 20:31:42</name>
+         <name>03/29/2020 20:32:33</name>
+         <name>03/29/2020 20:33:20</name>
+         <name>03/29/2020 20:33:24</name>
+         <name>03/29/2020 20:33:35</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>This product is already included on this list in group Unassigned Group. Add it to another group by choosing a group below. is displayed</name>
+         <name>Unassigned group header is displayed</name>
+         <name>6567077 product is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestAddingListWithoutUnassignedGroup Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3364">
+      <testscenario>AddingAndUndoListTest</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>8</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>8</totalsteps>
+      <stepsdate>
+         <name>03/29/2020 20:33:36</name>
+         <name>03/29/2020 20:34:39</name>
+         <name>03/29/2020 20:34:40</name>
+         <name>03/29/2020 20:35:26</name>
+         <name>03/29/2020 20:36:16</name>
+         <name>03/29/2020 20:36:57</name>
+         <name>03/29/2020 20:37:50</name>
+         <name>03/29/2020 20:38:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>This product is already included on this list in group Grp 1. Add it to another group by choosing a group below. is displayed</name>
+         <name>8326712 product is displayed</name>
+         <name>This product was added successfully. is displayed</name>
+         <name>2725141 product is not displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestAddingUndoList Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3142">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 18:44:05</name>
+         <name>04/16/2020 18:49:21</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3143">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 18:51:26</name>
+         <name>04/16/2020 18:56:38</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3145">
+      <testscenario>InvoicesAndPaymentsTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order/</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 19:22:40</name>
+         <name>04/16/2020 19:22:52</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order/</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;InvoicesAndPaymentsTest&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3146">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 19:24:16</name>
+         <name>04/16/2020 19:24:37</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3172">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 19:32:52</name>
+         <name>04/16/2020 19:38:08</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3204">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 20:42:34</name>
+         <name>04/16/2020 20:47:49</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3205">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 20:50:49</name>
+         <name>04/16/2020 20:57:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3206">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 21:04:33</name>
+         <name>04/16/2020 21:10:01</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 21:15:54</name>
+         <name>04/16/2020 21:16:14</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3208">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 21:16:57</name>
+         <name>04/16/2020 21:16:58</name>
+         <name>04/16/2020 21:17:00</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3209">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 21:20:05</name>
+         <name>04/16/2020 21:33:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3210">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>edge</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 21:52:24</name>
+         <name>04/16/2020 21:54:34</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3211">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>edge</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 22:42:53</name>
+         <name>04/16/2020 22:46:35</name>
+         <name>04/16/2020 22:46:37</name>
+         <name>04/16/2020 22:46:43</name>
+         <name>04/16/2020 22:46:49</name>
+         <name>04/16/2020 22:46:53</name>
+         <name>04/16/2020 22:46:56</name>
+         <name>04/16/2020 22:47:30</name>
+         <name>04/16/2020 22:47:34</name>
+         <name>04/16/2020 22:47:42</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3212">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>edge</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/16/2020 23:10:26</name>
+         <name>04/16/2020 23:13:57</name>
+         <name>04/16/2020 23:13:59</name>
+         <name>04/16/2020 23:14:05</name>
+         <name>04/16/2020 23:14:11</name>
+         <name>04/16/2020 23:14:15</name>
+         <name>04/16/2020 23:14:19</name>
+         <name>04/16/2020 23:14:53</name>
+         <name>04/16/2020 23:14:57</name>
+         <name>04/16/2020 23:15:07</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3213">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 00:39:31</name>
+         <name>04/17/2020 00:39:32</name>
+         <name>04/17/2020 00:39:34</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3236">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 00:46:13</name>
+         <name>04/17/2020 00:46:14</name>
+         <name>04/17/2020 00:46:17</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3268">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 01:33:45</name>
+         <name>04/17/2020 01:33:46</name>
+         <name>04/17/2020 01:33:48</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3300">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 01:52:06</name>
+         <name>04/17/2020 01:52:07</name>
+         <name>04/17/2020 01:52:09</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3332">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 18:46:39</name>
+         <name>04/17/2020 18:46:59</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3364">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 20:10:47</name>
+         <name>04/17/2020 20:11:22</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3365">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 20:15:33</name>
+         <name>04/17/2020 20:15:50</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3366">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/17/2020 20:22:01</name>
+         <name>04/17/2020 20:23:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3396">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 14:56:41</name>
+         <name>04/22/2020 14:56:43</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3397">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 14:59:25</name>
+         <name>04/22/2020 15:01:27</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3398">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:03:34</name>
+         <name>04/22/2020 15:07:18</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3399">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:18:02</name>
+         <name>04/22/2020 15:21:00</name>
+         <name>04/22/2020 15:21:01</name>
+         <name>04/22/2020 15:21:07</name>
+         <name>04/22/2020 15:21:12</name>
+         <name>04/22/2020 15:21:15</name>
+         <name>04/22/2020 15:21:19</name>
+         <name>04/22/2020 15:21:46</name>
+         <name>04/22/2020 15:21:49</name>
+         <name>04/22/2020 15:21:57</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3400">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:29:55</name>
+         <name>04/22/2020 15:31:56</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3401">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:48:40</name>
+         <name>04/22/2020 15:48:42</name>
+         <name>04/22/2020 15:49:26</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3402">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:52:47</name>
+         <name>04/22/2020 15:52:49</name>
+         <name>04/22/2020 15:53:34</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3403">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:55:59</name>
+         <name>04/22/2020 15:56:01</name>
+         <name>04/22/2020 15:56:43</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3403">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 15:56:43</name>
+         <name>04/22/2020 15:56:44</name>
+         <name>04/22/2020 15:57:23</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3404">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:01:37</name>
+         <name>04/22/2020 16:01:38</name>
+         <name>04/22/2020 16:02:22</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3404">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:02:22</name>
+         <name>04/22/2020 16:02:22</name>
+         <name>04/22/2020 16:03:02</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3428">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:06:05</name>
+         <name>04/22/2020 16:06:07</name>
+         <name>04/22/2020 16:06:51</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3428">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:06:51</name>
+         <name>04/22/2020 16:06:52</name>
+         <name>04/22/2020 16:07:30</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3430">
+      <testscenario>BlueprintBusinessSolutionsTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:10:45</name>
+         <name>04/22/2020 16:10:48</name>
+         <name>04/22/2020 16:11:30</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestBlueprintBusinessSolutions Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3431">
+      <testscenario>BlueprintBusinessSolutionsTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:22:47</name>
+         <name>04/22/2020 16:24:28</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestBlueprintBusinessSolutions Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3432">
+      <testscenario>BlueprintBusinessSolutionsTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>13</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>13</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:26:53</name>
+         <name>04/22/2020 16:28:06</name>
+         <name>04/22/2020 16:28:08</name>
+         <name>04/22/2020 16:28:18</name>
+         <name>04/22/2020 16:28:20</name>
+         <name>04/22/2020 16:28:28</name>
+         <name>04/22/2020 16:28:28</name>
+         <name>04/22/2020 16:28:41</name>
+         <name>04/22/2020 16:28:44</name>
+         <name>04/22/2020 16:28:48</name>
+         <name>04/22/2020 16:28:55</name>
+         <name>04/22/2020 16:28:58</name>
+         <name>04/22/2020 16:29:05</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Bussiness Solution section screenshot</name>
+         <name>At Business Solution section Learn More Text is displayed</name>
+         <name>Bussiness Solution URL matched</name>
+         <name>Page Screenshot</name>
+         <name>Healthcare Menus &amp; Recipes is displayed</name>
+         <name>At Business Solution section Learn More Text is displayed</name>
+         <name>Text Login to BluePrint System is displayed after Learn More link</name>
+         <name>Page Screenshot</name>
+         <name>Blue print bussiness solution URL matched</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestBlueprintBusinessSolutions Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3433">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:30:09</name>
+         <name>04/22/2020 16:31:21</name>
+         <name>04/22/2020 16:31:24</name>
+         <name>04/22/2020 16:31:31</name>
+         <name>04/22/2020 16:31:36</name>
+         <name>04/22/2020 16:31:39</name>
+         <name>04/22/2020 16:31:42</name>
+         <name>04/22/2020 16:32:11</name>
+         <name>04/22/2020 16:32:15</name>
+         <name>04/22/2020 16:32:23</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3433">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:32:23</name>
+         <name>04/22/2020 16:32:55</name>
+         <name>04/22/2020 16:35:11</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3434">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:41:49</name>
+         <name>04/22/2020 16:43:04</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3434">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>4</totalpass>
+      <totalfail>5</totalfail>
+      <totalsteps>9</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:43:04</name>
+         <name>04/22/2020 16:43:22</name>
+         <name>04/22/2020 16:43:28</name>
+         <name>04/22/2020 16:43:29</name>
+         <name>04/22/2020 16:43:37</name>
+         <name>04/22/2020 16:44:07</name>
+         <name>04/22/2020 16:44:38</name>
+         <name>04/22/2020 16:45:10</name>
+         <name>04/22/2020 16:45:48</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Home Page Notification is displayed</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:0:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (07449651-cdef-4a40-bbcd-4e26d280583e) (tried for 30 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:1:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (07449651-cdef-4a40-bbcd-4e26d280583e) (tried for 30 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//a[contains(text(),'More Notes From Your Team')]] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (07449651-cdef-4a40-bbcd-4e26d280583e) (tried for 30 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3435">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:46:54</name>
+         <name>04/22/2020 16:48:49</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3435">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>4</totalpass>
+      <totalfail>4</totalfail>
+      <totalsteps>8</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 16:48:49</name>
+         <name>04/22/2020 16:49:54</name>
+         <name>04/22/2020 16:49:55</name>
+         <name>04/22/2020 16:50:02</name>
+         <name>04/22/2020 16:50:33</name>
+         <name>04/22/2020 16:51:03</name>
+         <name>04/22/2020 16:51:35</name>
+         <name>04/22/2020 16:52:12</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Home Page Notification is displayed</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:0:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (0b313c4f-8e4d-46ba-9eb3-72f8ba900fc1) (tried for 30 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:1:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (0b313c4f-8e4d-46ba-9eb3-72f8ba900fc1) (tried for 30 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//a[contains(text(),'More Notes From Your Team')]] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (0b313c4f-8e4d-46ba-9eb3-72f8ba900fc1) (tried for 30 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3460">
+      <testscenario>BlueprintBusinessSolutionsTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 17:16:15</name>
+         <name>04/22/2020 17:16:19</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestBlueprintBusinessSolutions&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3461">
+      <testscenario>InvoicesAndPaymentsTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 17:30:28</name>
+         <name>04/22/2020 17:31:54</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order/</name>
+         <name>&lt;span class='waves-light red'&gt;InvoicesAndPaymentsTest Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3462">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 17:32:45</name>
+         <name>04/22/2020 17:35:11</name>
+         <name>04/22/2020 17:35:12</name>
+         <name>04/22/2020 17:35:18</name>
+         <name>04/22/2020 17:35:24</name>
+         <name>04/22/2020 17:35:27</name>
+         <name>04/22/2020 17:35:31</name>
+         <name>04/22/2020 17:36:00</name>
+         <name>04/22/2020 17:36:04</name>
+         <name>04/22/2020 17:36:12</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3462">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 17:36:12</name>
+         <name>04/22/2020 17:36:35</name>
+         <name>04/22/2020 17:37:31</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3463">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 17:41:58</name>
+         <name>04/22/2020 17:43:10</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3464">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 17:43:59</name>
+         <name>04/22/2020 17:45:11</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3465">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 18:14:51</name>
+         <name>04/22/2020 18:14:55</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3466">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 18:25:27</name>
+         <name>04/22/2020 18:26:41</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3467">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 18:55:15</name>
+         <name>04/22/2020 18:56:30</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3469">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 21:17:28</name>
+         <name>04/22/2020 21:18:48</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3492">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 21:35:06</name>
+         <name>04/22/2020 21:36:34</name>
+         <name>04/22/2020 21:36:40</name>
+         <name>04/22/2020 21:36:46</name>
+         <name>04/22/2020 21:36:52</name>
+         <name>04/22/2020 21:36:55</name>
+         <name>04/22/2020 21:36:58</name>
+         <name>04/22/2020 21:37:24</name>
+         <name>04/22/2020 21:37:27</name>
+         <name>04/22/2020 21:37:36</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3493">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/22/2020 21:39:44</name>
+         <name>04/22/2020 21:41:06</name>
+         <name>04/22/2020 21:41:08</name>
+         <name>04/22/2020 21:41:14</name>
+         <name>04/22/2020 21:41:20</name>
+         <name>04/22/2020 21:41:23</name>
+         <name>04/22/2020 21:41:26</name>
+         <name>04/22/2020 21:41:52</name>
+         <name>04/22/2020 21:41:56</name>
+         <name>04/22/2020 21:42:04</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3524">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 14:36:37</name>
+         <name>04/23/2020 14:36:39</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3525">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 14:39:24</name>
+         <name>04/23/2020 14:40:39</name>
+         <name>04/23/2020 14:42:27</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3556">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 15:55:57</name>
+         <name>04/23/2020 15:58:21</name>
+         <name>04/23/2020 15:58:23</name>
+         <name>04/23/2020 15:58:29</name>
+         <name>04/23/2020 15:58:35</name>
+         <name>04/23/2020 15:58:38</name>
+         <name>04/23/2020 15:58:41</name>
+         <name>04/23/2020 15:59:09</name>
+         <name>04/23/2020 15:59:12</name>
+         <name>04/23/2020 15:59:20</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3588">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 16:32:00</name>
+         <name>04/23/2020 16:34:16</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3589">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 16:42:23</name>
+         <name>04/23/2020 16:42:46</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3590">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3590">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3590">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 17:04:43</name>
+         <name>04/23/2020 17:05:09</name>
+         <name>04/23/2020 17:07:12</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3590">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3590">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3591">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3591">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3591">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 17:10:02</name>
+         <name>04/23/2020 17:10:27</name>
+         <name>04/23/2020 17:11:53</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3591">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3591">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3592">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3592">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3592">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 17:16:43</name>
+         <name>04/23/2020 17:17:07</name>
+         <name>04/23/2020 17:19:05</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3592">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3592">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3593">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3593">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3593">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 17:21:14</name>
+         <name>04/23/2020 17:21:38</name>
+         <name>04/23/2020 17:22:56</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3593">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3593">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3594">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3594">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3594">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 17:27:06</name>
+         <name>04/23/2020 17:28:54</name>
+         <name>04/23/2020 17:28:59</name>
+         <name>04/23/2020 17:29:06</name>
+         <name>04/23/2020 17:29:11</name>
+         <name>04/23/2020 17:29:14</name>
+         <name>04/23/2020 17:29:18</name>
+         <name>04/23/2020 17:29:54</name>
+         <name>04/23/2020 17:29:57</name>
+         <name>04/23/2020 17:30:05</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3594">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3594">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3595">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3595">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3595">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 18:46:25</name>
+         <name>04/23/2020 18:49:45</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3595">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3595">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3620">
+      <testscenario>ValidateCreateOrderOptionforListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3620">
+      <testscenario>ValidateCreateOrderOptionforNoListLMACustomer</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3620">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 18:57:27</name>
+         <name>04/23/2020 18:59:41</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3620">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3620">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>SKIP</status>
+      <totalpass>0</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>0</totalsteps>
+   </test>
+<test id="3622">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>firefox</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>10</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 19:57:14</name>
+         <name>04/23/2020 19:58:25</name>
+         <name>04/23/2020 19:58:30</name>
+         <name>04/23/2020 19:58:36</name>
+         <name>04/23/2020 19:58:41</name>
+         <name>04/23/2020 19:58:45</name>
+         <name>04/23/2020 19:58:48</name>
+         <name>04/23/2020 19:59:14</name>
+         <name>04/23/2020 19:59:17</name>
+         <name>04/23/2020 19:59:25</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>20px Gap is displayed</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3623">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 20:10:52</name>
+         <name>04/23/2020 20:11:57</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3652">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 20:25:24</name>
+         <name>04/23/2020 20:25:27</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3653">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 20:29:24</name>
+         <name>04/23/2020 20:29:28</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3654">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 20:48:08</name>
+         <name>04/23/2020 20:48:12</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3655">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 21:15:51</name>
+         <name>04/23/2020 21:15:54</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3684">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/23/2020 22:43:46</name>
+         <name>04/23/2020 22:43:49</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3716">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 00:31:42</name>
+         <name>04/24/2020 00:31:46</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage&lt;=Fatal=&gt;Exception comes when a code is unable to initialize WebDriver.&lt;/span&gt;</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3717">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 00:34:58</name>
+         <name>04/24/2020 00:37:11</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3718">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>9</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 00:38:38</name>
+         <name>04/24/2020 00:40:15</name>
+         <name>04/24/2020 00:40:16</name>
+         <name>04/24/2020 00:40:24</name>
+         <name>04/24/2020 00:40:31</name>
+         <name>04/24/2020 00:40:35</name>
+         <name>04/24/2020 00:40:40</name>
+         <name>04/24/2020 00:42:23</name>
+         <name>04/24/2020 00:42:28</name>
+         <name>04/24/2020 00:42:44</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (2315bc81-6e65-49fb-bdc9-ce8c3ecefe69) (tried for 60 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3719">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>9</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 00:48:21</name>
+         <name>04/24/2020 00:50:02</name>
+         <name>04/24/2020 00:50:03</name>
+         <name>04/24/2020 00:50:11</name>
+         <name>04/24/2020 00:50:18</name>
+         <name>04/24/2020 00:50:22</name>
+         <name>04/24/2020 00:50:27</name>
+         <name>04/24/2020 00:52:02</name>
+         <name>04/24/2020 00:52:08</name>
+         <name>04/24/2020 00:52:27</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (17821115-7aea-4c1a-a0e4-c171b83fcdb6) (tried for 60 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3720">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>9</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 01:01:18</name>
+         <name>04/24/2020 01:03:06</name>
+         <name>04/24/2020 01:03:07</name>
+         <name>04/24/2020 01:03:15</name>
+         <name>04/24/2020 01:03:22</name>
+         <name>04/24/2020 01:03:26</name>
+         <name>04/24/2020 01:03:31</name>
+         <name>04/24/2020 01:05:08</name>
+         <name>04/24/2020 01:05:13</name>
+         <name>04/24/2020 01:05:29</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (bdc2b155-b5ad-4f29-b218-cb99e0c1a52b) (tried for 60 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3721">
+      <testscenario>ValidatePointToListRatherThanEditPageTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>3</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 01:10:24</name>
+         <name>04/24/2020 01:13:17</name>
+         <name>04/24/2020 01:13:19</name>
+         <name>04/24/2020 01:15:18</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>&lt;span class='waves-light red'&gt;TestListPageRatherThenEditPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3722">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>9</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>10</totalsteps>
+      <stepsdate>
+         <name>04/24/2020 01:20:00</name>
+         <name>04/24/2020 01:21:45</name>
+         <name>04/24/2020 01:21:46</name>
+         <name>04/24/2020 01:21:54</name>
+         <name>04/24/2020 01:22:00</name>
+         <name>04/24/2020 01:22:05</name>
+         <name>04/24/2020 01:22:09</name>
+         <name>04/24/2020 01:23:48</name>
+         <name>04/24/2020 01:23:53</name>
+         <name>04/24/2020 01:24:11</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>My Order is displayed</name>
+         <name>CS and EA labels are aligned vertically</name>
+         <name>Ordering Status is displayed</name>
+         <name>View All Orders is displayed</name>
+         <name>&lt;span class='waves-light red'&gt;Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (ca60631a-8805-4585-8e45-05f04777078d) (tried for 60 second(s) with 2000 milliseconds interval)&lt;/span&gt;</name>
+         <name>30px Gap is displayed</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>TestHomePageOrderingSectionPage Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3723">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus/>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/27/2020 17:05:31</name>
+         <name>04/27/2020 17:05:34</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3724">
+      <testscenario>HomePageOrderingSectionTest</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>04/27/2020 17:06:36</name>
+         <name>04/27/2020 17:13:38</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;TestHomePageOrderingSectionPage Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3724">
+      <testscenario>ValidateRecommendedbyTMpage</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>0</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>1</totalsteps>
+      <stepsdate>
+         <name>04/27/2020 17:13:48</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>&lt;span class='waves-light red'&gt;TestTMNoteRecmd Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3724">
+      <testscenario>ValidateTMNoteNotification</testscenario>
+      <browser>ie</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>0</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>1</totalsteps>
+      <stepsdate>
+         <name>04/27/2020 17:14:08</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>&lt;span class='waves-light red'&gt;TestTMNotification Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+</reports>

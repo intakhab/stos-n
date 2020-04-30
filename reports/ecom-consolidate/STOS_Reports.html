@@ -1,0 +1,4349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>STOS : Consolidate reports</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+.table-sm td, .table-sm th {
+	padding: .1rem;
+}
+.table thead tr th {
+	vertical-align: bottom;
+	background-color: dodgerblue;
+}
+.colort {
+	background-color: dodgerblue;
+}
+.center {
+	text-align: center;
+}
+.right{
+text-align: right;
+	padding-top: 5px;
+	padding: .1rem;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<table class="table table-borderless">
+			<tr style="text-align: center; padding-top: 20px;">
+				<td><img
+					src="data:image/x-icon;base64,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" /></td>
+			</tr>
+			<!-- <tr>
+				<td class="center"><h1>US Foods</h1></td>
+			</tr> -->
+			<tr>
+				<td class="center"><h3>STOS Automation Execution Report</h3></td>
+			</tr>
+			<tr>
+				<td class="center"><h4>Date: Wed Apr 29 15:39:14 IST 2020  ( 192.168.1.16-LP-5CD809BB4K )</h4></td>
+			</tr>
+
+
+		</table>
+		<p></p>
+		<p></p>
+		<div
+			class="col-sm-6 card row mx-auto justify-content-center align-items-center flex-column">
+			<table class="table table-borderless ">
+				<tr>
+					<td class="center"><h3>High Level Execution Summary</h3></td>
+				</tr>
+			</table>
+			<table class="table table-striped table-sm">
+				<thead>
+					<tr>
+						<th>Description</th>
+						<th>Test Scenario Count</th>
+						<th>Test Case Count</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					   <td>PASS</td>
+					       <td>13</td>
+					   <td>254</td>
+					</tr>
+					<tr>
+									<td>FAIL</td>
+						<td>75</td>
+						<td>178</td>
+					    </tr>
+					<tr>
+						<td>TOTAL</td>
+						   <td>88</td>
+						<td>432</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p></p>
+		<p></p>
+		<div
+			class="col-sm-12 card row mx-auto justify-content-center align-items-center flex-column"  style="font-size: 11px;">
+			<table class="table table-borderless">
+				<tr>
+					<td class="center"><h3>Script Wise Passed/Failed Summary
+							Details</h3></td>
+				</tr>
+			</table>
+			<table class="table table-striped  table-sm">
+			     <thead>
+					<tr>
+						<th>SNO#</th>
+						<th>Test Scenario Name</th>
+						<th>Browser</th>
+						<th>URL</th>
+						<th>Status</th>
+						<th>Executed Steps</th>
+						<th>Pass Steps</th>
+						<th>Fail Steps</th>
+						<th>Env Status</th>
+					</tr>
+				</thead>
+				<thead>
+					<tr>
+						<td>1</td>
+						<td>AddingListWithoutUnassignedGroupTest</td>
+						<td>chrome</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>7</td>
+						<td>7</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>2</td>
+						<td>AddingAndUndoListTest</td>
+						<td>chrome</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>8</td>
+						<td>8</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>3</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>4</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>5</td>
+						<td>InvoicesAndPaymentsTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order/</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>6</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>7</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>8</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>9</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>10</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>11</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>12</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>13</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>14</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>edge</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>15</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>edge</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>16</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>edge</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>17</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>18</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>19</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>20</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>21</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>22</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>23</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>24</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>25</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>26</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>27</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>28</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>29</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>30</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>31</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>32</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>33</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>34</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>35</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>36</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>37</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>38</td>
+						<td>BlueprintBusinessSolutionsTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>39</td>
+						<td>BlueprintBusinessSolutionsTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>40</td>
+						<td>BlueprintBusinessSolutionsTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>13</td>
+						<td>13</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>41</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>42</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>43</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>44</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>9</td>
+						<td>4</td>
+						<td>5</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>45</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>46</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>8</td>
+						<td>4</td>
+						<td>4</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>47</td>
+						<td>BlueprintBusinessSolutionsTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>48</td>
+						<td>InvoicesAndPaymentsTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order/</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>49</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>50</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>51</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>52</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>53</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>54</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>55</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>56</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>57</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>58</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>59</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>60</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>61</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>62</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>63</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>64</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>65</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>66</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>67</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>68</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>69</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>70</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>71</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>72</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>73</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>74</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>75</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>76</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>77</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>78</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>79</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>80</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>81</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>3</td>
+						<td>1</td>
+						<td>2</td>
+						<td ><span style='background-color:red'><b>DOWN</b></span></td>
+					</tr><tr>
+						<td>82</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>83</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>84</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>85</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>86</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>87</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>88</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>89</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>90</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>91</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>92</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>93</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>94</td>
+						<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>95</td>
+						<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>96</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>97</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>98</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:cyan'><b>SKIP</b></span></td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>99</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:green'><b>PASS</b></span></td>
+						<td>10</td>
+						<td>10</td>
+						<td>0</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>100</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>101</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>102</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>103</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>104</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>105</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>106</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>107</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>108</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>10</td>
+						<td>9</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>109</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>10</td>
+						<td>9</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>110</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>10</td>
+						<td>9</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>111</td>
+						<td>ValidatePointToListRatherThanEditPageTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>112</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>10</td>
+						<td>9</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>113</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>114</td>
+						<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>115</td>
+						<td>ValidateRecommendedbyTMpage</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>116</td>
+						<td>ValidateTMNoteNotification</td>
+						<td>ie</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p></p>
+		<p></p>
+		</div>
+		<div>
+		<div class="col-sm-16 card" style="width: 100%">
+			<table class="table table-borderless ">
+				<tr>
+					<td class="center"><h3>Test Scenarios Step By Step
+							Execution Details</h3></td>
+				</tr>
+			</table>
+			<table class="table table-striped table-bordered table-sm" style="font-size: 12px;">
+				<thead>
+					<tr>
+						<th>SNO#</th>
+						<th>Test Scenario Name</th>
+						<th>Browser</th>
+						<th>
+							<table class="table table-striped table-borderless table-sm right">
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Steps Description</th>
+										<th>Description Details</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+							</table>
+						</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+<td>1</td>
+<td>AddingListWithoutUnassignedGroupTest</td>
+						<td>chrome</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>03/29/2020 20:30:16</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:31:41</td>
+					<td width='600px'>STOS is able to select customer: 33356783 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:31:42</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:32:33</td>
+					<td width='600px'>This product is already included on this list in group Unassigned Group. Add it to another group by choosing a group below. is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:33:20</td>
+					<td width='600px'>Unassigned group header is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:33:24</td>
+					<td width='600px'>6567077 product is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:33:35</td>
+					<td width='600px'></td>
+					<td width='300px'>TestAddingListWithoutUnassignedGroup Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>2</td>
+<td>AddingAndUndoListTest</td>
+						<td>chrome</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>03/29/2020 20:33:36</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:34:39</td>
+					<td width='600px'>STOS is able to select customer: 33356783 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:34:40</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:35:26</td>
+					<td width='600px'>This product is already included on this list in group Grp 1. Add it to another group by choosing a group below. is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:36:16</td>
+					<td width='600px'>8326712 product is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:36:57</td>
+					<td width='600px'>This product was added successfully. is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:37:50</td>
+					<td width='600px'>2725141 product is not displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>03/29/2020 20:38:02</td>
+					<td width='600px'></td>
+					<td width='300px'>TestAddingUndoList Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>3</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 18:44:05</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 18:49:21</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>4</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 18:51:26</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 18:56:38</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>5</td>
+<td>InvoicesAndPaymentsTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 19:22:40</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order/</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 19:22:52</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>InvoicesAndPaymentsTest<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>6</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 19:24:16</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 19:24:37</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>7</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 19:32:52</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 19:38:08</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>8</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 20:42:34</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 20:47:49</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>9</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 20:50:49</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 20:57:02</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>10</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 21:04:33</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 21:10:01</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>11</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 21:15:54</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 21:16:14</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>12</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 21:16:57</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 21:16:58</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 21:17:00</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>13</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 21:20:05</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 21:33:02</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>14</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>edge</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 21:52:24</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 21:54:34</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>15</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>edge</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 22:42:53</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:46:35</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:46:37</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:46:43</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:46:49</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:46:53</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:46:56</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:47:30</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:47:34</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 22:47:42</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>16</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>edge</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/16/2020 23:10:26</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:13:57</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:13:59</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:14:05</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:14:11</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:14:15</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:14:19</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:14:53</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:14:57</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/16/2020 23:15:07</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>17</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 00:39:31</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 00:39:32</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 00:39:34</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>18</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 00:46:13</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 00:46:14</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 00:46:17</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>19</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 01:33:45</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 01:33:46</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 01:33:48</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>20</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 01:52:06</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 01:52:07</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 01:52:09</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>21</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 18:46:39</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 18:46:59</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>22</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 20:10:47</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 20:11:22</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>23</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 20:15:33</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 20:15:50</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>24</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/17/2020 20:22:01</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/17/2020 20:23:02</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>25</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 14:56:41</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 14:56:43</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>26</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 14:59:25</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:01:27</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>27</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:03:34</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:07:18</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>28</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:18:02</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:00</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:01</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:07</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:12</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:15</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:19</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:46</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:49</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:21:57</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>29</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:29:55</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:31:56</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>30</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:48:40</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:48:42</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:49:26</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>31</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:52:47</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:52:49</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:53:34</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>32</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:55:59</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:56:01</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:56:43</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>33</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 15:56:43</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:56:44</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 15:57:23</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>34</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:01:37</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:01:38</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:02:22</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>35</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:02:22</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:02:22</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:03:02</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>36</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:06:05</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:06:07</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:06:51</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>37</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:06:51</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:06:52</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:07:30</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>38</td>
+<td>BlueprintBusinessSolutionsTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:10:45</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:10:48</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:11:30</td>
+					<td width='600px'><span class='waves-light red'>TestBlueprintBusinessSolutions Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>39</td>
+<td>BlueprintBusinessSolutionsTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:22:47</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:24:28</td>
+					<td width='600px'><span class='waves-light red'>TestBlueprintBusinessSolutions Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>40</td>
+<td>BlueprintBusinessSolutionsTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:26:53</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:06</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:08</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:18</td>
+					<td width='600px'>Bussiness Solution section screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:20</td>
+					<td width='600px'>At Business Solution section Learn More Text is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:28</td>
+					<td width='600px'>Bussiness Solution URL matched</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:28</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:41</td>
+					<td width='600px'>Healthcare Menus & Recipes is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:44</td>
+					<td width='600px'>At Business Solution section Learn More Text is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:48</td>
+					<td width='600px'>Text Login to BluePrint System is displayed after Learn More link</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:55</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:28:58</td>
+					<td width='600px'>Blue print bussiness solution URL matched</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:29:05</td>
+					<td width='600px'></td>
+					<td width='300px'>TestBlueprintBusinessSolutions Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>41</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:30:09</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:31:21</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:31:24</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:31:31</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:31:36</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:31:39</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:31:42</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:32:11</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:32:15</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:32:23</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>42</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:32:23</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:32:55</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:35:11</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>43</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:41:49</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:43:04</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>44</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:43:04</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:43:22</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:43:28</td>
+					<td width='600px'>STOS is able to select customer: 33356783 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:43:29</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:43:37</td>
+					<td width='600px'>Home Page Notification is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:44:07</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:0:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (07449651-cdef-4a40-bbcd-4e26d280583e) (tried for 30 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:44:38</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:1:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (07449651-cdef-4a40-bbcd-4e26d280583e) (tried for 30 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:45:10</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//a[contains(text(),'More Notes From Your Team')]] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (07449651-cdef-4a40-bbcd-4e26d280583e) (tried for 30 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:45:48</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>45</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:46:54</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:48:49</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>46</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 16:48:49</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:49:54</td>
+					<td width='600px'>STOS is able to select customer: 33356783 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:49:55</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:50:02</td>
+					<td width='600px'>Home Page Notification is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:50:33</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:0:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (0b313c4f-8e4d-46ba-9eb3-72f8ba900fc1) (tried for 30 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:51:03</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//*[@id='dgfSPT:r5:0:i3:0:lv1:1:li1']] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (0b313c4f-8e4d-46ba-9eb3-72f8ba900fc1) (tried for 30 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:51:35</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//a[contains(text(),'More Notes From Your Team')]] : Expected condition failed: Time out exception-FirefoxDriver: firefox on WINDOWS (0b313c4f-8e4d-46ba-9eb3-72f8ba900fc1) (tried for 30 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 16:52:12</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>47</td>
+<td>BlueprintBusinessSolutionsTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 17:16:15</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:16:19</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestBlueprintBusinessSolutions<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>48</td>
+<td>InvoicesAndPaymentsTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 17:30:28</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order/</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:31:54</td>
+					<td width='600px'><span class='waves-light red'>InvoicesAndPaymentsTest Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>49</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 17:32:45</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:35:11</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:35:12</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:35:18</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:35:24</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:35:27</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:35:31</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:36:00</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:36:04</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:36:12</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>50</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 17:36:12</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:36:35</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:37:31</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>51</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 17:41:58</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:43:10</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>52</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 17:43:59</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 17:45:11</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>53</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 18:14:51</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 18:14:55</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>54</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 18:25:27</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 18:26:41</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>55</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 18:55:15</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 18:56:30</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>56</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 21:17:28</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:18:48</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>57</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 21:35:06</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:36:34</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:36:40</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:36:46</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:36:52</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:36:55</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:36:58</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:37:24</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:37:27</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:37:36</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>58</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/22/2020 21:39:44</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:06</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:08</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:14</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:20</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:23</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:26</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:52</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:41:56</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/22/2020 21:42:04</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>59</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 14:36:37</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 14:36:39</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>60</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 14:39:24</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 14:40:39</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 14:42:27</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>61</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 15:55:57</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:58:21</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:58:23</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:58:29</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:58:35</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:58:38</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:58:41</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:59:09</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:59:12</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 15:59:20</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>62</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 16:32:00</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 16:34:16</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>63</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 16:42:23</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 16:42:46</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>64</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>65</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>66</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 17:04:43</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:05:09</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:07:12</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>67</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>68</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>69</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>70</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>71</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 17:10:02</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:10:27</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:11:53</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>72</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>73</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>74</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>75</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>76</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 17:16:43</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:17:07</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:19:05</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>77</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>78</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>79</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>80</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>81</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 17:21:14</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:21:38</td>
+					<td width='600px'><span class='waves-light red'>It seems site is down!!!</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:22:56</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>82</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>83</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>84</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>85</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>86</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 17:27:06</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:28:54</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:28:59</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:29:06</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:29:11</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:29:14</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:29:18</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:29:54</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:29:57</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 17:30:05</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>87</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>88</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>89</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>90</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>91</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 18:46:25</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 18:49:45</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>92</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>93</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>94</td>
+<td>ValidateCreateOrderOptionforListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>95</td>
+<td>ValidateCreateOrderOptionforNoListLMACustomer</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>96</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 18:57:27</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 18:59:41</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>97</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>98</td>
+<td>ValidateTMNoteNotification</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='120px'>-</td>
+					<td  width='600px'>-</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:cyan'><b>SKIP</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>99</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>firefox</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 19:57:14</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:58:25</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:58:30</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:58:36</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:58:41</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:58:45</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:58:48</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:59:14</td>
+					<td width='600px'>20px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:59:17</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 19:59:25</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>100</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 20:10:52</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 20:11:57</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>101</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 20:25:24</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 20:25:27</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>102</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 20:29:24</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 20:29:28</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>103</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 20:48:08</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 20:48:12</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>104</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 21:15:51</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 21:15:54</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>105</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/23/2020 22:43:46</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/23/2020 22:43:49</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>106</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 00:31:42</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:31:46</td>
+					<td width='600px'></td>
+					<td width='300px'><span class='waves-light red'>TestHomePageOrderingSectionPage<=Fatal=>Exception comes when a code is unable to initialize WebDriver.</span></td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>107</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 00:34:58</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:37:11</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>108</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 00:38:38</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:40:15</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:40:16</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:40:24</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:40:31</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:40:35</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:40:40</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:42:23</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (2315bc81-6e65-49fb-bdc9-ce8c3ecefe69) (tried for 60 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:42:28</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:42:44</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>109</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 00:48:21</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:50:02</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:50:03</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:50:11</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:50:18</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:50:22</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:50:27</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:52:02</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (17821115-7aea-4c1a-a0e4-c171b83fcdb6) (tried for 60 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:52:08</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 00:52:27</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>110</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 01:01:18</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:03:06</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:03:07</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:03:15</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:03:22</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:03:26</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:03:31</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:05:08</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (bdc2b155-b5ad-4f29-b218-cb99e0c1a52b) (tried for 60 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:05:13</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:05:29</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>111</td>
+<td>ValidatePointToListRatherThanEditPageTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 01:10:24</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:13:17</td>
+					<td width='600px'>STOS is able to select customer: 33356783 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:13:19</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:15:18</td>
+					<td width='600px'><span class='waves-light red'>TestListPageRatherThenEditPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>112</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/24/2020 01:20:00</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:21:45</td>
+					<td width='600px'>STOS is able to select customer: 33497140 with department: 0</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:21:46</td>
+					<td width='600px'>Page Screenshot</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:21:54</td>
+					<td width='600px'>My Order is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:22:00</td>
+					<td width='600px'>CS and EA labels are aligned vertically</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:22:05</td>
+					<td width='600px'>Ordering Status is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:22:09</td>
+					<td width='600px'>View All Orders is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:23:48</td>
+					<td width='600px'><span class='waves-light red'>Element not found [//div[contains(@style,'width:103px;padding-top:6px;padding-left:20px')]] : Expected condition failed: Time out exception-InternetExplorerDriver: internet explorer on WINDOWS (ca60631a-8805-4585-8e45-05f04777078d) (tried for 60 second(s) with 2000 milliseconds interval)</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:23:53</td>
+					<td width='600px'>30px Gap is displayed</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/24/2020 01:24:11</td>
+					<td width='600px'></td>
+					<td width='300px'>TestHomePageOrderingSectionPage Test Case Passed</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>113</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/27/2020 17:05:31</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/27/2020 17:05:34</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>114</td>
+<td>HomePageOrderingSectionTest</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/27/2020 17:06:36</td>
+					<td width='600px'>URL :: https://ecomsit2.usfood.com/order</td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:green'><b>PASS</b></span></td>
+				</tr><tr>
+	 				<td width='125px'>04/27/2020 17:13:38</td>
+					<td width='600px'><span class='waves-light red'>TestHomePageOrderingSectionPage Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>115</td>
+<td>ValidateRecommendedbyTMpage</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/27/2020 17:13:48</td>
+					<td width='600px'><span class='waves-light red'>TestTMNoteRecmd Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr><tr>
+<td>116</td>
+<td>ValidateTMNoteNotification</td>
+						<td>ie</td>
+						<td>
+							<table class='table table-bordered table-sm'>
+							 <tbody>
+<tr>
+	 				<td width='125px'>04/27/2020 17:14:08</td>
+					<td width='600px'><span class='waves-light red'>TestTMNotification Test Case Failed</span></td>
+					<td width='300px'>-</td>
+					<td width='40px'><span style='color:red'><b>FAIL</b></span></td>
+				</tr>							</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+	</div>
+
+	<div class="clearfix"></div>
+	<div class="clearfix"></div>
+	<div class="clearfix"></div>
+
+	<br />
+	<br />
+	<div id="footer" class="footer">
+		<p class="footer-block center">HCL©2020</p>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>STOS : Health Check Reports</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.table-sm td, .table-sm th {
+	padding: .1rem;
+}
+.table thead tr th {
+	vertical-align: bottom;
+	background-color: dodgerblue;
+}
+.colort {
+	background-color: dodgerblue;
+}
+.center {
+	text-align: center;
+}
+.right{
+text-align: right;
+	padding-top: 5px;
+	padding: .1rem;
+}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-borderless" style="background-color:white">
+			<tr style="text-align: center; padding-top: 20px;">
+				<td style="text-align: center;">
+					<img src="cid:screenShotImage" alt="img" height="30px" width="40px;" />
+				</td>
+			</tr>
+		
+			<tr>
+				<td class="center"><h3>Health Check Execution Report</h3></td>
+			</tr>
+			<tr>
+				<td class="center"  style="text-align: center;"><h4>Date: Thu Apr 23 19:39:44 IST 2020  ( 10.34.62.103-LP-5CD809BB4K )</h4></td>
+			</tr>
+
+
+		</table>
+		<p></p>
+		<p></p>
+		<div class="col-sm-6 card row mx-auto justify-content-center align-items-center flex-column">
+			<table class="table table-border">
+				<tr>
+					<td class="center"><h3>High Level Execution Summary</h3></td>
+				</tr>
+			</table>
+			<table class="table table-striped table-sm"  border="1"  style="border: 1px solid #000080;">
+				<thead>
+					<tr>
+						<th>Description</th>
+						<th>Test Scenario Count</th>
+						<th>Test Case Count</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					   <td>PASS</td>
+					       <td>0</td>
+					   <td>19</td>
+					</tr>
+					<tr>
+									<td>FAIL</td>
+						<td>9</td>
+						<td>18</td>
+					    </tr>
+					<tr>
+						<td>TOTAL</td>
+						   <td>9</td>
+						<td>37</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p></p>
+		<p></p>
+		<div
+			class="col-sm-12 card row mx-auto justify-content-center align-items-center flex-column"  style="font-size: 11px;">
+			<table class="table table-border">
+				<tr>
+					<td class="center"><h3>Script Wise Passed/Failed Summary
+							Details</h3></td>
+				</tr>
+			</table>
+			<table class="table table-striped  table-sm" border="1"  style="border: 1px solid	#000080;">
+			     <thead>
+					<tr>
+						<th>SNO#</th>
+						<th>Test Scenario Name</th>
+						<th>Browser</th>
+						<th>URL</th>
+						<th>Status</th>
+						<th>Executed Steps</th>
+						<th>Pass Steps</th>
+						<th>Fail Steps</th>
+						<th>Env Status</th>
+					</tr>
+				</thead>
+				<thead>
+					<tr>
+						<td>1</td>
+						<td>NormalOrderCreationTestSIT</td>
+						<td>firefox</td>
+						<td>https://ecomsit.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>2</td>
+						<td>NormalOrderCreationTestSIT2</td>
+						<td>firefox</td>
+						<td>https://ecomsit2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>3</td>
+						<td>NormalOrderCreationTestSIT4</td>
+						<td>firefox</td>
+						<td>https://ecomsit4.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>4</td>
+						<td>NormalOrderCreationTestUAT</td>
+						<td>firefox</td>
+						<td>https://ecomuat.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>5</td>
+						<td>NormalOrderCreationTestUAT2</td>
+						<td>firefox</td>
+						<td>https://ecomuat2.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>6</td>
+						<td>NormalOrderCreationTestUAT4</td>
+						<td>firefox</td>
+						<td>https://ecomuat4.usfood.com/order</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr><tr>
+						<td>7</td>
+						<td>NormalOrderCreationTestExt</td>
+						<td>firefox</td>
+						<td>https://lab-www3.usfoods.com/order/</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>8</td>
+						<td>NormalOrderCreationTestPERF1</td>
+						<td>firefox</td>
+						<td>https://ha-www3-perf-orange.usfoods.com/order/</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+						<td ><span style='background-color:green'><b>UP</b></span></td>
+					</tr><tr>
+						<td>9</td>
+						<td>NormalOrderCreationTestPERF2</td>
+						<td>firefox</td>
+						<td>https://green-www3-perf.usfoods.com/order/</td>
+						<td><span style='background-color:red'><b>FAIL</b></span></td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td ><span style='background-color:CYAN'><b>SKIP</b></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<p></p>
+			<p></p>
+			<hr>
+			<table border="1" cellpadding="10" style="border: 1px solid	#000080;" width="100%">
+				<tr bgcolor="#A9A9A9">
+					<td><span style="color:red">*</span>PASS</td>
+					<td>All Steps executed Successfully</td>
+					<td><span style="color:red">*</span>FAIL</td>
+					<td>All Steps not executed Successfully (Due to data
+						issue/Environment issue)</td>
+				</tr>
+				<tr bgcolor="#A9A9A9">
+					<td><span style="color:red">*</span>UP</td>
+					<td>Particular Environment is UP</td>
+					<td><span style="color:red">*</span>DOWN</td>
+					<td>Particular Environment is Down</td>
+				</tr>
+			</table>
+			<p></p>
+			<p></p>
+		</div>
+		<p></p>
+		<p></p>
+		</div>
+		<div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="clearfix"></div>
+	<div class="clearfix"></div>
+
+	<br />
+	<br />
+</body>
+</html>
+

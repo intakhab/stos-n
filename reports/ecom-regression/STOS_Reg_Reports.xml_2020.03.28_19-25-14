@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reports>
+   <test id="3207">
+      <testscenario>NormalOrderCreationTestSIT</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:01:09</name>
+         <name>03/28/2020 19:01:15</name>
+         <name>03/28/2020 19:01:53</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestSIT2</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit2.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>3</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:01:53</name>
+         <name>03/28/2020 19:05:16</name>
+         <name>03/28/2020 19:05:17</name>
+         <name>03/28/2020 19:05:54</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit2.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestSIT2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestSIT4</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomsit4.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>4</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:05:54</name>
+         <name>03/28/2020 19:07:13</name>
+         <name>03/28/2020 19:07:14</name>
+         <name>03/28/2020 19:10:00</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomsit4.usfood.com/order</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestSIT4 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestUAT</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomuat.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:10:00</name>
+         <name>03/28/2020 19:10:04</name>
+         <name>03/28/2020 19:10:41</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestUAT2</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomuat2.usfood.com/order</url>
+      <envstatus>DOWN</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>2</totalfail>
+      <totalsteps>3</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:10:41</name>
+         <name>03/28/2020 19:10:45</name>
+         <name>03/28/2020 19:11:21</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat2.usfood.com/order</name>
+         <name>&lt;span class='waves-light red'&gt;It seems site is down!!!&lt;/span&gt;</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestUAT2 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestUAT4</testscenario>
+      <browser>chrome</browser>
+      <url>https://ecomuat4.usfood.com/order</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>5</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>5</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:11:22</name>
+         <name>03/28/2020 19:13:17</name>
+         <name>03/28/2020 19:13:19</name>
+         <name>03/28/2020 19:15:52</name>
+         <name>03/28/2020 19:16:00</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ecomuat4.usfood.com/order</name>
+         <name>STOS is able to select customer: 10778298 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestUAT4 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestExt</testscenario>
+      <browser>chrome</browser>
+      <url>https://lab-www3.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>3</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>4</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:16:00</name>
+         <name>03/28/2020 19:17:41</name>
+         <name>03/28/2020 19:17:43</name>
+         <name>03/28/2020 19:18:15</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://lab-www3.usfoods.com/order/</name>
+         <name>STOS is able to select customer: 33497140 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestExt Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestPERF1</testscenario>
+      <browser>chrome</browser>
+      <url>https://ha-www3-perf-orange.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>FAIL</status>
+      <totalpass>1</totalpass>
+      <totalfail>1</totalfail>
+      <totalsteps>2</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:18:16</name>
+         <name>03/28/2020 19:19:24</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://ha-www3-perf-orange.usfoods.com/order/</name>
+         <name>&lt;span class='waves-light red'&gt;NormalOrderingTestPRef1 Test Case Failed&lt;/span&gt;</name>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>FAIL</name>
+      </stepstatus>
+   </test>
+<test id="3207">
+      <testscenario>NormalOrderCreationTestPERF2</testscenario>
+      <browser>chrome</browser>
+      <url>https://green-www3-perf.usfoods.com/order/</url>
+      <envstatus>UP</envstatus>
+      <status>PASS</status>
+      <totalpass>5</totalpass>
+      <totalfail>0</totalfail>
+      <totalsteps>5</totalsteps>
+      <stepsdate>
+         <name>03/28/2020 19:19:24</name>
+         <name>03/28/2020 19:21:04</name>
+         <name>03/28/2020 19:21:06</name>
+         <name>03/28/2020 19:23:56</name>
+         <name>03/28/2020 19:24:00</name>
+      </stepsdate>
+      <stepsinfo>
+         <name>URL :: https://green-www3-perf.usfoods.com/order/</name>
+         <name>STOS is able to select customer: 33356783 with department: 0</name>
+         <name>Page Screenshot</name>
+         <name>Page Screenshot</name>
+         <name/>
+      </stepsinfo>
+      <stepsdetails>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>-</name>
+         <name>NormalOrderingTestRef2 Test Case Passed</name>
+      </stepsdetails>
+      <stepstatus>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+         <name>PASS</name>
+      </stepstatus>
+   </test>
+</reports>
